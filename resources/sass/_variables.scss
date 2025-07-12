@@ -1,0 +1,61 @@
+
+// This file is for overriding default Bootstrap variables
+// Only define variables that you want to override from the default Bootstrap variables
+// The actual Bootstrap variables are imported in app.scss
+
+// Colors
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// Theme colors
+$primary:       #0d6efd !default;
+$secondary:     #6c757d !default;
+$success:       #198754 !default;
+$info:          #0dcaf0 !default;
+$warning:       #ffc107 !default;
+$danger:        #dc3545 !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+
+// Body
+$body-bg:                   #f5f8fa !default;
+$body-color:                $gray-900 !default;
+$body-text-align:           null !default;
+
+// Typography
+$font-family-sans-serif: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 0.875rem !default; // 14px
+$line-height-base: 1.6 !default;
+
+// Navbar
+$navbar-light-color:                rgba($body-color, 0.85) !default;
+$navbar-light-hover-color:          rgba($primary, 0.9) !default;
+$navbar-light-active-color:         $primary !default;
+$navbar-light-disabled-color:       rgba($body-color, 0.3) !default;
+
+// Buttons
+$btn-font-weight: 500 !default;
+
+// Forms
+$input-btn-focus-color:       rgba($primary, 0.25) !default;
+$input-focus-border-color:    lighten($primary, 25%) !default;
+$input-btn-focus-box-shadow:  0 0 0 0.2rem $input-btn-focus-color !default;
+
+// Cards
+$card-cap-bg:                 rgba($black, 0.03) !default;
+$card-border-color:           rgba($black, 0.125) !default;
+$card-cap-padding-y:          0.75rem !default;
+$card-cap-padding-x:          1.25rem !default;
+
+// Custom variables
+$border-radius:               0.25rem !default;
+$box-shadow:                  0 0.125rem 0.25rem rgba($black, 0.075) !default;

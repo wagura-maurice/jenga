@@ -1,0 +1,61 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+// Bootstrap
+@import 'bootstrap/scss/functions';
+@import 'variables';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities/api';
+
+// Custom styles
+body {
+    font-family: $font-family-sans-serif;
+    line-height: $line-height-base;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+// Custom components
+.card {
+    box-shadow: $box-shadow;
+    
+    .card-header {
+        background-color: $card-cap-bg;
+        border-bottom: 1px solid $card-border-color;
+        font-weight: 600;
+    }
+}
+
+// Custom utilities
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Responsive helpers
+@include media-breakpoint-down(md) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
