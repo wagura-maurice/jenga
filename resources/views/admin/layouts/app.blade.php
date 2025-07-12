@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 
     <!-- Load compiled CSS from Laravel Mix -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ mix('css/app.css') }}" rel="stylesheet" /> --}}
 
     <!-- Admin Theme CSS -->
     <link href="{{ asset('assets/admin/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css') }}"
@@ -79,7 +79,7 @@
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="{{ asset('assets/admin/plugins/pace/pace.min.js') }}"></script>
     <!-- Load compiled JS from Laravel Mix -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
     <!-- ================== END BASE JS ================== -->
 </head>
 
