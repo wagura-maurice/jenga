@@ -302,7 +302,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <img src="{!! secure_asset('uploads/images/' . $loandocuments->document) !!}" />
+                                                <img src="{!! asset('uploads/images/' . $loandocuments->document) !!}" />
                                             </div>
                                         </div>
                                         <div class="row">

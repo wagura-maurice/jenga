@@ -44,7 +44,7 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td><img src="{!! secure_asset('uploads/images/' . $membershipfeesdata['company'][0]->logo) !!}" height='70px' /></td>
+                            <td><img src="{!! asset('uploads/images/' . $membershipfeesdata['company'][0]->logo) !!}" height='70px' /></td>
                             <td></td>
                         </tr>
                         <tr>
