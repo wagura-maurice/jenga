@@ -1,0 +1,59 @@
+diff --git a/vendor/laravel/framework/src/Illuminate/Http/Request.php b/vendor/laravel/framework/src/Illuminate/Http/Request.php
+index 1bce2a7..a1e5b5f 100644
+--- a/vendor/laravel/framework/src/Illuminate/Http/Request.php
++++ b/vendor/laravel/framework/src/Illuminate/Http/Request.php
+@@ -548,6 +548,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
+      * @param  string  $offset
+      * @return bool
+      */
++    #[\ReturnTypeWillChange]
+     public function offsetExists($offset)
+     {
+         return array_key_exists($offset, $this->all());
+@@ -558,6 +559,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
+      * @param  string  $offset
+      * @return mixed
+      */
++    #[\ReturnTypeWillChange]
+     public function offsetGet($offset)
+     {
+         return $this->__get($offset);
+@@ -569,6 +571,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
+      * @param  mixed  $value
+      * @return void
+      */
++    #[\ReturnTypeWillChange]
+     public function offsetSet($offset, $value)
+     {
+         $this->getInputSource()->set($offset, $value);
+@@ -579,6 +582,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
+      * @param  string  $offset
+      * @return void
+      */
++    #[\ReturnTypeWillChange]
+     public function offsetUnset($offset)
+     {
+         $this->getInputSource()->remove($offset);
+
+diff --git a/vendor/laravel/framework/src/Illuminate/Container/Container.php b/vendor/laravel/framework/src/Illuminate/Container/Container.php
+index 5e9e4e5..a1b2c8d 100644
+--- a/vendor/laravel/framework/src/Illuminate/Container/Container.php
++++ b/vendor/laravel/framework/src/Illuminate/Container/Container.php
+@@ -785,7 +785,7 @@ class Container implements ArrayAccess, ContainerContract
+                 // If the parameter has a type-hinted class, we will check to see if it is already in
+                 // the list of parameters. If it is we'll just skip it as it is probably a model
+                 // binding and we do not want to mess with those; otherwise, we resolve it here.
+-                $class = $parameter->getClass();
++                $class = $parameter->getType() && ! $parameter->getType()->isBuiltin() ? new ReflectionClass($parameter->getType()->getName()) : null;
+ 
+                 if ($class && ! $this->alreadyInParameters($class->name, $parameters)) {
+                     $parameters[] = $this->make($class->name);
+@@ -793,7 +793,7 @@ class Container implements ArrayAccess, ContainerContract
+             } elseif ($parameter->isDefaultValueAvailable()) {
+                 $parameters[] = $parameter->getDefaultValue();
+             } elseif (! $parameter->isOptional() && ! array_key_exists($parameter->name, $parameters)) {
+-                $message = "Unresolvable dependency resolving [$parameter] in class {$parameter->getDeclaringClass()->getName()}";
++                $message = "Unresolvable dependency resolving [$parameter] in class ".$parameter->getDeclaringClass()->getName();
+ 
+                 throw new BindingResolutionException($message);
+             }
