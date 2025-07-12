@@ -63,20 +63,5 @@ class AppServiceProvider extends ServiceProvider
             // primary requirement for digital ocean MySQL network
             DB::statement('SET SESSION sql_require_primary_key=0');
         }
-
-        /*
-        |-----------------------------------------------
-        | Load domain-specific .env file if it exists
-        |-----------------------------------------------
-        */
-
-        if(isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST']) ) {
-            $data = explode('.', $_SERVER['HTTP_HOST']);
-            config([
-                'app.name' => strtoupper('epiphium technologies - ' . $data[0]),
-                'app.url' => 'http://' . $data[0] . '.' . $data[1] . '.com',
-                'database.connections.mysql.database' => $data[0]
-            ]);
-        }
     }
 }
