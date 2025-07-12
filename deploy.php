@@ -38,6 +38,25 @@ set('bin/composer', function () {
     return '/usr/bin/php7.4 /usr/local/bin/composer';
 });
 
+// Custom composer install task for PHP 7.4 compatibility
+task('deploy:composer_install', function () {
+    // Run composer install with --no-scripts to prevent post-install scripts
+    run('cd {{release_path}} && {{bin/composer}} install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader --no-scripts');
+    
+    // Apply PHP 7.4 compatibility patches
+    if (test('[ -f {{release_path}}/patches/laravel-5.4-php7.4-compat.patch ]')) {
+        run('cd {{release_path}} && patch -p1 -N < patches/laravel-5.4-php7.4-compat.patch || true');
+    }
+    
+    if (test('[ -f {{release_path}}/patches/symfony-parameterbag-php74.patch ]')) {
+        run('cd {{release_path}} && patch -p1 -N < patches/symfony-parameterbag-php74.patch || true');
+    }
+    
+    // Run the post-install scripts manually
+    run('{{bin/php}} {{release_path}}/artisan package:discover');
+    run('{{bin/php}} {{release_path}}/artisan optimize');
+});
+
 // Tasks
 task('build', function () {
     run('cd {{release_path}} && build');
@@ -80,3 +99,7 @@ after('deploy:failed', 'deploy:unlock');
 /* task('npm:build', function () {
     run('cd {{release_path}} && npm install && npm run production');
 })->desc('Install npm dependencies and build assets'); */
+
+// Override the default composer install task
+before('deploy:vendors', 'deploy:composer_install');
+skip('deploy:vendors', 'Should be handled by deploy:composer_install');

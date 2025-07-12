@@ -1,7 +1,15 @@
-# Apply PHP 7.4 compatibility patch
+# Apply PHP 7.4 compatibility patches
+
+# Patch Laravel 5.4 for PHP 7.4
 
 if [ -f "patches/laravel-5.4-php7.4-compat.patch" ]; then
 patch -p1 -N < patches/laravel-5.4-php7.4-compat.patch || true
+fi
+
+# Patch Symfony ParameterBag for PHP 7.4
+
+if [ -f "patches/symfony-parameterbag-php74.patch" ]; then
+patch -p1 -N < patches/symfony-parameterbag-php74.patch || true
 fi
 
 # Clear all caches
