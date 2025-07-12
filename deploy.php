@@ -100,6 +100,11 @@ after('deploy:failed', 'deploy:unlock');
     run('cd {{release_path}} && npm install && npm run production');
 })->desc('Install npm dependencies and build assets'); */
 
-// Override the default composer install task
-before('deploy:vendors', 'deploy:composer_install');
-skip('deploy:vendors', 'Should be handled by deploy:composer_install');
+// Override the default composer install behavior
+before('deploy:vendors', function() {
+    // Remove the default deploy:vendors task
+    remove('deploy:vendors');
+    
+    // Run our custom composer install
+    invoke('deploy:composer_install');
+});
