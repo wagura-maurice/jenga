@@ -1,0 +1,10 @@
+# process.yml at /var/www/html/jenga/current which is root dir of the project
+apps:
+  # Run php artisan queue:work to execute queue job
+  - script: "artisan"
+    name: "jenga-artisan-queue-work"
+    cwd: "/var/www/html/jenga/current"
+    args: "queue:work" # or queue:work
+    interpreter: "php"
+
+  # same way add any other script if any.
