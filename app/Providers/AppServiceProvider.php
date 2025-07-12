@@ -57,8 +57,12 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         require_once app_path() . '/Helpers/JENGA.php';
-
-        // DB::statement('SET SESSION sql_require_primary_key=0');
+        
+        // App Environment.
+        if (env('APP_ENV') === 'production') {
+            // primary requirement for digital ocean MySQL network
+            DB::statement('SET SESSION sql_require_primary_key=0');
+        }
 
         /*
         |-----------------------------------------------
