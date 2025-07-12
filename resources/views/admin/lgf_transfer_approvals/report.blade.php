@@ -36,7 +36,7 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td></td><td><img src="{!!secure_asset('uploads/images/'.$lgftransferapprovalsdata['company'][0]->logo)!!}"   height='70px'/></td><td></td>
+                                <td></td><td><img src="{!!asset('uploads/images/'.$lgftransferapprovalsdata['company'][0]->logo)!!}"   height='70px'/></td><td></td>
                             </tr>
                     <div class="invoice-date">
                             <tr>

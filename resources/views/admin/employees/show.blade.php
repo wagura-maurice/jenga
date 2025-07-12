@@ -401,7 +401,7 @@
                                 <tr>
                                     <td class="field">Image</td>
                                     <td><img src="{!! isset($employeesdata['data']->image) && !empty($employeesdata['data']->image)
-                                        ? secure_asset('uploads/images/' . $employeesdata['data']->image)
+                                        ? asset('uploads/images/' . $employeesdata['data']->image)
                                         : null !!}" width='164' height='164' />
                                     </td>
                                 </tr>

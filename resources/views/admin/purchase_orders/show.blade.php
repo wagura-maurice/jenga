@@ -32,7 +32,7 @@
                     <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i
                             class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
                 </span>
-                <img src="{!! secure_asset('uploads/images/' . $purchaseordersdata['company']->logo) !!}" style="max-height: 70px;" />
+                <img src="{!! asset('uploads/images/' . $purchaseordersdata['company']->logo) !!}" style="max-height: 70px;" />
             </div>
             <!-- end invoice-company -->
             <!-- begin invoice-header -->

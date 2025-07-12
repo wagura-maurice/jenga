@@ -31,7 +31,7 @@
                             <tbody>
                                 <tr>
                                     <td class="field">Image</td>
-                                    <td><img src="{!! secure_asset('uploads/images/' . $currenciesdata['data']->image) !!}" width='164' height='164' />
+                                    <td><img src="{!! asset('uploads/images/' . $currenciesdata['data']->image) !!}" width='164' height='164' />
                                     </td>
                                 </tr>
                                 <tr>

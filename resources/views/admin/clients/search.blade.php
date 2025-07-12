@@ -30,16 +30,16 @@
                             <button type="button" class="btn btn-inverse" onclick="search()"><i class="fa fa-search"></i>
                                 Search</button>
                             <!--                             <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-cog"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:;">Action</a></li>
-                                    <li><a href="javascript:;">Another action</a></li>
-                                    <li><a href="javascript:;">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="javascript:;">Separated link</a></li>
-                                </ul>
-     -->
+                                        <i class="fa fa-cog"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:;">Action</a></li>
+                                        <li><a href="javascript:;">Another action</a></li>
+                                        <li><a href="javascript:;">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:;">Separated link</a></li>
+                                    </ul>
+         -->
                         </div>
 
                     </div>
@@ -64,20 +64,6 @@
                                 class="fa fa-th-large"></i></a>
                     </div>
                     <!--                 <ul class="pagination pagination-without-border pull-right m-t-0">
-                        <li class="disabled"><a href="javascript:;">«</a></li>
-                        <li class="active"><a href="javascript:;">1</a></li>
-                        <li><a href="javascript:;">2</a></li>
-                        <li><a href="javascript:;">3</a></li>
-                        <li><a href="javascript:;">4</a></li>
-                        <li><a href="javascript:;">5</a></li>
-                        <li><a href="javascript:;">6</a></li>
-                        <li><a href="javascript:;">7</a></li>
-                        <li><a href="javascript:;">»</a></li>
-                    </ul> -->
-                    <ul class="result-list" id="result-list">
-                    </ul>
-                    <div class="clearfix">
-                        <!--                     <ul class="pagination pagination-without-border pull-right">
                             <li class="disabled"><a href="javascript:;">«</a></li>
                             <li class="active"><a href="javascript:;">1</a></li>
                             <li><a href="javascript:;">2</a></li>
@@ -88,6 +74,20 @@
                             <li><a href="javascript:;">7</a></li>
                             <li><a href="javascript:;">»</a></li>
                         </ul> -->
+                    <ul class="result-list" id="result-list">
+                    </ul>
+                    <div class="clearfix">
+                        <!--                     <ul class="pagination pagination-without-border pull-right">
+                                <li class="disabled"><a href="javascript:;">«</a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">2</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">4</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                                <li><a href="javascript:;">6</a></li>
+                                <li><a href="javascript:;">7</a></li>
+                                <li><a href="javascript:;">»</a></li>
+                            </ul> -->
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                         console.log(list[c]);
                         var client = list[c];
                         var row =
-                            "<li><div class=\"result-image\"><a href=\"javascript:;\"><img src=\"{!! secure_asset('uploads/images/' . '+client.client_photo+') !!}\" alt=\"\" onerror=\"this.src='{!! secure_asset('uploads/images/default-user.png') !!}'\" /></a></div><div class=\"result-info\"><h4 class=\"title\"><a href=\"javascript:;\">" +
+                            "<li><div class=\"result-image\"><a href=\"javascript:;\"><img src=\"{!! asset('uploads/images/' . '+client.client_photo+') !!}\" alt=\"\" onerror=\"this.src='{!! asset('uploads/images/default-user.png') !!}'\" /></a></div><div class=\"result-info\"><h4 class=\"title\"><a href=\"javascript:;\">" +
                             client.first_name + " " + client.middle_name + " " + client.last_name +
                             "</a></h4><p class=\"location\">" + client.client_number +
                             "</p><p class=\"desc\">" + client.id_number +

@@ -40,7 +40,7 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td><img src="{!! secure_asset('uploads/images/' . $paymentmodesdata['company'][0]->logo) !!}" style="max-height: 70px;" /></td>
+                            <td><img src="{!! asset('uploads/images/' . $paymentmodesdata['company'][0]->logo) !!}" style="max-height: 70px;" /></td>
                             <td></td>
                         </tr>
                         <div class="invoice-date">
