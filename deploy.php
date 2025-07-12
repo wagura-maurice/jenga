@@ -8,7 +8,7 @@ require 'recipe/laravel.php';
 set('application', 'jenga');
 
 // Project repository
-set('repository', 'git@gitlab.com:wagura-maurice/jenga.git');
+set('repository', 'git@github.com:wagura-maurice/jenga.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
