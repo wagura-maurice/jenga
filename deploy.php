@@ -38,8 +38,6 @@ set('bin/composer', function () {
     return '/usr/bin/php7.4 /usr/local/bin/composer';
 });
 
-
-
 // Tasks
 task('build', function () {
     run('cd {{release_path}} && build');
