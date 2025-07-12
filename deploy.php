@@ -83,7 +83,7 @@ after('deploy:failed', 'deploy:unlock');
 
 // Override the default deploy:vendors task
 task('deploy:vendors', function() {
-    // Run our custom composer install
+    // First, install dependencies with --no-scripts
     run('cd {{release_path}} && {{bin/composer}} install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader --no-scripts');
     
     // Apply PHP 7.4 compatibility patches
@@ -95,7 +95,10 @@ task('deploy:vendors', function() {
         run('cd {{release_path}} && patch -p1 -N < patches/symfony-parameterbag-php74.patch || true');
     }
     
+    // Now run composer dump-autoload to ensure all classes are loaded
+    run('cd {{release_path}} && {{bin/composer}} dump-autoload --optimize');
+    
     // Run the post-install scripts manually
-    run('{{bin/php}} {{release_path}}/artisan package:discover');
-    run('{{bin/php}} {{release_path}}/artisan optimize');
+    run('cd {{release_path}} && {{bin/php}} artisan clear-compiled');
+    run('cd {{release_path}} && {{bin/php}} artisan optimize');
 });
