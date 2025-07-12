@@ -15,7 +15,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- ================== BEGIN BASE CSS STYLE ================== -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <!-- Load compiled CSS from Laravel Mix -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
+
+    <!-- Admin Theme CSS -->
     <link href="{{ secure_asset('assets/admin/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css') }}"
         rel="stylesheet" />
     <link href="{{ secure_asset('assets/admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -82,6 +87,8 @@
 
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="{{ secure_asset('assets/admin/plugins/pace/pace.min.js') }}"></script>
+    <!-- Load compiled JS from Laravel Mix -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
     <!-- ================== END BASE JS ================== -->
 </head>
 
@@ -157,19 +164,24 @@
 
     <!-- ================== END PAGE LEVEL JS ================== -->
 
-    <script>
-        $(document).ready(function() {
-            App.init();
-            Dashboard.init();
-            LoginV2.init();
-            FormPlugins.init();
-            TableManageDefault.init();
-            FormWizard.init();
 
-        });
-    </script>
     <script src="{{ secure_asset('js/sweetalert2@11.js') }}"></script>
     <script src="{{ secure_asset('js/axios.min.js') }}"></script>
+
+    <!-- Initialize any global scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.App) {
+                App.init();
+                Dashboard.init();
+                LoginV2.init();
+                FormPlugins.init();
+                TableManageDefault.init();
+                FormWizard.init();
+            }
+        });
+    </script>
+
     @yield('script')
 </body>
 
