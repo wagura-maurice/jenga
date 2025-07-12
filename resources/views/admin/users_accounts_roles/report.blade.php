@@ -32,7 +32,7 @@
                     </address>
                 </div>
                 <div class="invoice-date">
-                    <img src="{!! asset('uploads/images/' . $usersaccountsrolesdata['company'][0]->logo) !!}" width='100' height='100' />
+                    <img src="{!! secure_asset('uploads/images/' . $usersaccountsrolesdata['company'][0]->logo) !!}" width='100' height='100' />
                 </div>
             </div>
             <div class="invoice-content">

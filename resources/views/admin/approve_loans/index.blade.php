@@ -306,7 +306,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <img src="{!! asset('uploads/images/' . $loandocuments->document) !!}" />
+                                            <img src="{!! secure_asset('uploads/images/' . $loandocuments->document) !!}" />
                                         </div>
                                     </div>
                                     <div class="row">
@@ -553,11 +553,11 @@
                             </div>
 
                             <!--                             <div class="col-md-3 m-t-10">
-                                        @if ($loansdata['loanproduct']->clearingfeepaymenttypemodel->code == '001')
+                                            @if ($loansdata['loanproduct']->clearingfeepaymenttypemodel->code == '001')
     <a href="#clearing-fee-modal-dialog" class="btn btn-danger" data-toggle="modal">Pay Now</a>
     @endif
 
-                                    </div> -->
+                                        </div> -->
 
                         </div>
                         <div class="form-group">
@@ -687,10 +687,10 @@
                             </div>
 
                             <!--                            <div class="col-md-3 m-t-10">
-                                        @if ($loansdata['loanproduct']->insurancedeductionfeepaymenttypemodel->code == '001')
+                                            @if ($loansdata['loanproduct']->insurancedeductionfeepaymenttypemodel->code == '001')
     <a href="#insurance-deduction-fee-modal-dialog" class="btn btn-danger" data-toggle="modal">Pay Now</a>
     @endif
-                                    </div> -->
+                                        </div> -->
                         </div>
                         <div class="form-group">
                             <label for="Clearing Fee" class="col-md-3 m-t-10 control-label text-right">Amount Paid</label>
@@ -776,10 +776,10 @@
                                     value="{{ $loansdata['insurancedeductionfee'] }}">
                             </div>
                             <!--                            <div class="col-md-3 m-t-10">
-                                        @if ($loansdata['loanproduct']->insurancedeductionfeepaymenttypemodel->code == '001')
+                                            @if ($loansdata['loanproduct']->insurancedeductionfeepaymenttypemodel->code == '001')
     <a href="#insurance-deduction-fee-modal-dialog" class="btn btn-danger" data-toggle="modal">Pay Now</a>
     @endif
-                                    </div> -->
+                                        </div> -->
                         </div>
                         <div class="form-group">
                             <label for="Clearing Fee" class="col-md-3 m-t-10 control-label text-right">Amount Paid</label>

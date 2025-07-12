@@ -159,51 +159,51 @@
                         <h4 class="panel-title">Todo List</h4>
                     </div>
                     <!-- <div class="panel-body p-0">
-               <ul class="todolist">
-                <li class="active">
-                 <a href="javascript:;" class="todolist-container active" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Donec vehicula pretium nisl, id lacinia nisl tincidunt id.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Duis a ullamcorper massa.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Phasellus bibendum, odio nec vestibulum ullamcorper.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Duis pharetra mi sit amet dictum congue.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Duis pharetra mi sit amet dictum congue.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Phasellus bibendum, odio nec vestibulum ullamcorper.</div>
-                 </a>
-                </li>
-                <li>
-                 <a href="javascript:;" class="todolist-container active" data-click="todolist">
-                  <div class="todolist-input"><i class="fa fa-square-o"></i></div>
-                  <div class="todolist-title">Donec vehicula pretium nisl, id lacinia nisl tincidunt id.</div>
-                 </a>
-                </li>
-               </ul>
-              </div> -->
+                   <ul class="todolist">
+                    <li class="active">
+                     <a href="javascript:;" class="todolist-container active" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Donec vehicula pretium nisl, id lacinia nisl tincidunt id.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Duis a ullamcorper massa.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Phasellus bibendum, odio nec vestibulum ullamcorper.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Duis pharetra mi sit amet dictum congue.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Duis pharetra mi sit amet dictum congue.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Phasellus bibendum, odio nec vestibulum ullamcorper.</div>
+                     </a>
+                    </li>
+                    <li>
+                     <a href="javascript:;" class="todolist-container active" data-click="todolist">
+                      <div class="todolist-input"><i class="fa fa-square-o"></i></div>
+                      <div class="todolist-title">Donec vehicula pretium nisl, id lacinia nisl tincidunt id.</div>
+                     </a>
+                    </li>
+                   </ul>
+                  </div> -->
                 </div>
             </div>
             <div class="col-md-6">
@@ -237,7 +237,7 @@
     <!-- end #content -->
 @endsection
 @section('script')
-    <script src="{{ asset('assets/admin/js/chart-d3.demo.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/admin/js/chart-d3.demo.min.js') }}"></script>
     <script type="text/javascript">
         // ChartNvd3.init();  
         function handleBarChart() {

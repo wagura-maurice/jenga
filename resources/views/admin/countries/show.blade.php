@@ -31,7 +31,7 @@
                             <tbody>
                                 <tr>
                                     <td class="field">Flag</td>
-                                    <td><img src="{!! asset('uploads/images/' . $countriesdata['data']->flag) !!}" width='164' height='164' />
+                                    <td><img src="{!! secure_asset('uploads/images/' . $countriesdata['data']->flag) !!}" width='164' height='164' />
                                     </td>
                                 </tr>
                                 <tr>

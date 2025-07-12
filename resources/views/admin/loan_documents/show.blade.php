@@ -42,7 +42,7 @@
                                 </tr>
                                 <tr>
                                     <td class="field">Document</td>
-                                    <td><img src="{!! asset('uploads/images/' . $loandocumentsdata['data']->document) !!}" width='164' height='164' />
+                                    <td><img src="{!! secure_asset('uploads/images/' . $loandocumentsdata['data']->document) !!}" width='164' height='164' />
                                     </td>
                                 </tr>
                             </tbody>

@@ -469,7 +469,7 @@
                                                 <label for="Client Photo" class="col-sm-3 control-label">Client
                                                     Photo</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_photo }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_photo }}')"
                                                         alt="client photo" />
                                                 </div>
                                             </div>
@@ -477,7 +477,7 @@
                                                 <label for="Client Finger Print" class="col-sm-3 control-label">Client
                                                     Finger Print</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_finger_print }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_finger_print }}')"
                                                         alt="client photo" />
                                                 </div>
                                             </div>
@@ -485,7 +485,7 @@
                                                 <label for="Client Signature" class="col-sm-3 control-label">Client
                                                     Signature</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_signature }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_signature }}')"
                                                         alt="client photo" />
                                                 </div>
                                             </div>

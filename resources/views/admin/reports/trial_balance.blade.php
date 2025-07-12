@@ -64,7 +64,7 @@
                     </address>
                 </div>
                 <div class="invoice-date">
-                    <img src="{{ asset('uploads/images/' . $trialbalancedata['company'][0]->logo) }}" />
+                    <img src="{{ secure_asset('uploads/images/' . $trialbalancedata['company'][0]->logo) }}" />
                 </div>
             </div>
             <div class="invoice-content">

@@ -501,7 +501,7 @@
                                                 <label for="Client Photo" class="col-sm-3 control-label">Client
                                                     Photo</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_photo }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_photo }}')"
                                                         alt="client photo" />
                                                 </div>
                                             </div>
@@ -509,7 +509,7 @@
                                                 <label for="Client Finger Print" class="col-sm-3 control-label">Client
                                                     Finger Print</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_finger_print }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_finger_print }}')"
                                                         alt="client finger print photo" />
                                                 </div>
                                             </div>
@@ -517,7 +517,7 @@
                                                 <label for="Client Signature" class="col-sm-3 control-label">Client
                                                     Signature</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->client_signature }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->client_signature }}')"
                                                         alt="client signature photo" />
                                                 </div>
                                             </div>
@@ -525,7 +525,7 @@
                                                 <label for="Client Photo" class="col-sm-3 control-label">Home Image
                                                     1</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->home_image_1 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->home_image_1 }}')"
                                                         alt="home image 1" />
                                                 </div>
                                             </div>
@@ -533,7 +533,7 @@
                                                 <label for="Client Finger Print" class="col-sm-3 control-label">Home Image
                                                     2</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->home_image_2 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->home_image_2 }}')"
                                                         alt="home image 2" />
                                                 </div>
                                             </div>
@@ -541,7 +541,7 @@
                                                 <label for="Client Signature" class="col-sm-3 control-label">Home Image
                                                     3</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->home_image_3 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->home_image_3 }}')"
                                                         alt="home image 3" />
                                                 </div>
                                             </div>
@@ -549,7 +549,7 @@
                                                 <label for="Client Photo" class="col-sm-3 control-label">Business Image
                                                     1</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->business_image_1 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->business_image_1 }}')"
                                                         alt="business image 1" />
                                                 </div>
                                             </div>
@@ -557,7 +557,7 @@
                                                 <label for="Client Finger Print" class="col-sm-3 control-label">Business
                                                     Image 2</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->business_image_2 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->business_image_2 }}')"
                                                         alt="business image 2" />
                                                 </div>
                                             </div>
@@ -565,7 +565,7 @@
                                                 <label for="Client Signature" class="col-sm-3 control-label">Business
                                                     Image 3</label>
                                                 <div class="col-sm-6">
-                                                    <img src="asset('/uploads/images/{{ $clientsdata['data']->business_image_3 }}')"
+                                                    <img src="secure_asset('/uploads/images/{{ $clientsdata['data']->business_image_3 }}')"
                                                         alt="business image 3" />
                                                 </div>
                                             </div>
