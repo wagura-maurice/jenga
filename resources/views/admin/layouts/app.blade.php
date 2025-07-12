@@ -147,7 +147,6 @@
     <script src="{{ asset('assets/admin/js/login-v2.demo.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/d3.min.js') }}"></script>
     <script src="{{ asset('assets/admin/plugins/nvd3/build/nv.d3.js') }}"></script>
-    -->
     <script src="{{ asset('assets/admin/js/apps.min.js') }}"></script>
 
     <!-- ================== END PAGE LEVEL JS ================== -->
